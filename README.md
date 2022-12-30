@@ -123,15 +123,14 @@ To do this is simple. For a example, we will make it so if the player is holding
 ```lua
 Sandbox.CreateItem(Sandbox.ModDirectory.."Example Mod/YouBastards.png", 312, 156, function(this, playerHand)
   if playerHand == this then
-    Sandbox.Shoot(this, true)
+    Sandbox.Shoot(this)
   end
 end)
 ```
 Here we create an anonymous function with the parameters of this and playerHand, you must include these parameters or else you're game will likly crash.
 The script basically checks if the playerHand (which is the currentlyHolding GameObject in the code) is equal to this object.
 
-If so, then start shooting. To make the gun shoot, we use Shoot function. This makes any object that is a gun shoot. Pretty simple. You will also have to define if the
-object is custom or not, it helps with parsing the object.
+If so, then start shooting. To make the gun shoot, we use Shoot function. This makes any object that is a gun shoot. Pretty simple.
 
 # Conclusion
 Overall, modding this game is pretty easy. There are even more functions that were not listed here, you can go into the Mods folder in this repo to find examples of them. Since I'm tired of documenting this already. Well, hope you have fun with modding!
