@@ -3,6 +3,6 @@ function Start()
 end
 function Update(Keycodes)
     if Sandbox.IsMouseDown(MouseButtons.Left) then
-        Sandbox.SpawnObject("Gun", 5, 0)
+        Sandbox.SpawnObject("Gun", Sandbox.GetPlayerX() + 2, Sandbox.GetPlayerY())
     end
 end
